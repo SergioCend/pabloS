@@ -1,0 +1,13 @@
+<script type="text/template" id="autor">
+    <div class="form-group">
+    <form role="form" id="<%= componentId %>-autorForm">
+    <% if(autor.id) {%>
+    <input type="hidden" name="id" value="<%= autor.id %>"/>
+    <% }%>
+		<div class="form-group" >
+		<label for="name">Name</label>
+    	<input type="text" class="form-control" id="name" name="name" placeholder="Enter value" value="<%= autor.get('name') %>"/>	
+		</div>
+    </form>
+    </div>
+</script> 

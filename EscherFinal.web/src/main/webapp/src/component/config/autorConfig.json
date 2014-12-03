@@ -1,0 +1,9 @@
+{
+    "displayName" : "Autor",
+    "name" : "autor",
+    "templateName" : "autor",
+    "url" : "user.html",
+    "server": "localhost:8080",
+    "context": "/EscherFinal.web/webresources/Autor",
+    "el" : "#main"
+}

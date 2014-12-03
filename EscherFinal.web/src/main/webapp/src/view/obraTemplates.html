@@ -1,0 +1,48 @@
+<script type="text/template" id="obra">
+    <div class="form-group">
+    <form role="form" id="<%= componentId %>-obraForm">
+    <% if(obra.id) {%>
+    <input type="hidden" name="id" value="<%= obra.id %>"/>
+    <% }%>
+		<div class="form-group" >
+		<label for="urlArchivo">Url Archivo</label>
+    	<input type="text" class="form-control" id="urlArchivo" name="urlArchivo" placeholder="Enter value" value="<%= obra.get('urlArchivo') %>"/>	
+		</div>
+		<div class="form-group" >
+		<label for="name">Name</label>
+    	<input type="text" class="form-control" id="name" name="name" placeholder="Enter value" value="<%= obra.get('name') %>"/>	
+		</div>
+    </form>
+    </div>
+</script> 
+
+<script type="text/template" id="obraList">
+    <div class="panel panel-default">
+    <!-- Default panel contents -->
+    <table class="table striped">
+    <thead>
+    <tr>
+		 <th>Url Archivo</th>
+		 <th>Name</th>
+    <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <% _.each(obras, function(obra) { %>
+    <tr>
+		<td><a href="<%= htmlEncode(obra.getDisplay('urlArchivo')) %>"><%= htmlEncode(obra.getDisplay('name')) %></a></td>
+		<td><%= htmlEncode(obra.getDisplay('name')) %></td>
+    <td>
+    <% if(showEdit) {%>
+    <a onclick="Backbone.trigger('<%= componentId %>-obra-edit',{id:<%= obra.id %>}); return false" >Edit</a> |
+	<% } %> 
+	<% if(showDelete) {%>
+    <a onclick="Backbone.trigger('<%= componentId %>-obra-delete',{id:<%= obra.id %>}); return false" >Delete</a> 
+	<% } %>    
+	</td>
+    </tr>
+    <% }); %>
+    </tbody>
+    </table>
+    </div>
+</script>

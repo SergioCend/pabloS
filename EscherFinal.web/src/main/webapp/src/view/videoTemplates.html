@@ -1,0 +1,17 @@
+<script type="text/template" id="video">
+    <div class="form-group">
+    <form role="form" id="<%= componentId %>-videoForm">
+    <% if(video.id) {%>
+    <input type="hidden" name="id" value="<%= video.id %>"/>
+    <% }%>
+		<div class="form-group" >
+		<label for="urlArchivo">Url Archivo</label>
+    	<input type="text" class="form-control" id="urlArchivo" name="urlArchivo" placeholder="Enter value" value="<%= video.get('urlArchivo') %>"/>	
+		</div>
+		<div class="form-group" >
+		<label for="name">Name</label>
+    	<input type="text" class="form-control" id="name" name="name" placeholder="Enter value" value="<%= video.get('name') %>"/>	
+		</div>
+    </form>
+    </div>
+</script> 

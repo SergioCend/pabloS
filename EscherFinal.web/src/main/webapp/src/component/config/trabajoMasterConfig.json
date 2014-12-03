@@ -1,0 +1,11 @@
+{
+    "displayName" : "Trabajo",
+    "name" : "trabajo",
+    "templateName" : "trabajo",
+    "url" : "trabajo.html",
+    "server": "localhost:8080",
+    "server": "localhost:8080",
+    "context": "/EscherFinal.web/webresources/TrabajoMaster",
+    
+    "el" : "#main"
+}

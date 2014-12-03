@@ -1,0 +1,17 @@
+<script type="text/template" id="imagen">
+    <div class="form-group">
+    <form role="form" id="<%= componentId %>-imagenForm">
+    <% if(imagen.id) {%>
+    <input type="hidden" name="id" value="<%= imagen.id %>"/>
+    <% }%>
+		<div class="form-group" >
+		<label for="name">Name</label>
+    	<input type="text" class="form-control" id="name" name="name" placeholder="Enter value" value="<%= imagen.get('name') %>"/>	
+		</div>
+		<div class="form-group" >
+		<label for="url">Url</label>
+    	<input type="text" class="form-control" id="url" name="url" placeholder="Enter value" value="<%= imagen.get('url') %>"/>	
+		</div>
+    </form>
+    </div>
+</script> 

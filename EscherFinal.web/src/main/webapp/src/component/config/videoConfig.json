@@ -1,0 +1,9 @@
+{
+    "displayName" : "Video",
+    "name" : "video",
+    "templateName" : "video",
+    "url" : "user.html",
+    "server": "localhost:8080",
+    "context": "/EscherFinal.web/webresources/Video",
+    "el" : "#main"
+}

@@ -1,0 +1,17 @@
+<script type="text/template" id="trabajo">
+    <div class="form-group">
+    <form role="form" id="<%= componentId %>-trabajoForm">
+    <% if(trabajo.id) {%>
+    <input type="hidden" name="id" value="<%= trabajo.id %>"/>
+    <% }%>
+		<div class="form-group" >
+		<label for="resenha">Resenha</label>
+    	<input type="text" class="form-control" id="resenha" name="resenha" placeholder="Enter value" value="<%= trabajo.get('resenha') %>"/>	
+		</div>
+		<div class="form-group" >
+		<label for="name">Name</label>
+    	<input type="text" class="form-control" id="name" name="name" placeholder="Enter value" value="<%= trabajo.get('name') %>"/>	
+		</div>
+    </form>
+    </div>
+</script> 
